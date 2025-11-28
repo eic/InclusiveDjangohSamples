@@ -1,0 +1,278 @@
+*******************************************************************************
+
+                                   HERACLES 
+
+               Event generator for deep-inelastic e-P collisions 
+                        including radiative corrections  
+
+                           VERSION 4.6.21, 05.12.2022 
+
+
+
+                                H. Spiesberger 
+
+ ******************************************************************************
+
+
+
+
+ *****NEXT CONTROL CARD ***** OUTFILENAM
+
+      OUTFILENAM=outfiles/djangoh.NC.norad.18x275_Q2_1000_10000                                  
+
+
+ *****NEXT CONTROL CARD ***** TITLE     
+
+
+      DJANGOH 4.6.21 for eRHIC for PR, LO at 18x275, Wmin=3.0                         
+
+
+
+ *****NEXT CONTROL CARD ***** EL-BEAM   
+
+      EELE=   1.800E+01     POLARI=   0.000E+00     LLEPT= -1
+
+
+ *****NEXT CONTROL CARD ***** PR-BEAM   
+
+      EPRO=   2.750E+02     HPOLAR=   0.000E+00
+
+
+ *****NEXT CONTROL CARD ***** GSW-PARAM 
+
+      2 0 3 1 0 0 2 1 1 1 1
+
+
+ *****NEXT CONTROL CARD ***** KINEM-CUTS
+
+      ICUT, XMIN,        XMAX,        YMIN,        YMAX 
+      3     1.0000E-05   1.0000E+00   1.0000E-04   1.0000E+00
+            Q2MIN,       Q2MAX,       WMIN 
+            1.0000E+03   1.0000E+04   3.0000E+00
+
+
+ *****NEXT CONTROL CARD ***** EGAM-MIN  
+
+      EGMIN =       0.0000E+00
+
+
+ *****NEXT CONTROL CARD ***** INT-OPT-NC
+
+      INC2  =        1
+      INC31 =        0      INC32 =        0
+      INC33 =        0      INC34 =        0
+      IEL2  =        0
+      IEL31 =        0      IEL32 =        0
+      IEL33 =        0
+
+
+ *****NEXT CONTROL CARD ***** INT-OPT-CC
+
+      ICC2  =        0      ICC31 =        0
+      ICC32 =        0      ICC33 =        0
+
+
+ *****NEXT CONTROL CARD ***** INT-ONLY  
+
+      INTOPT       1
+
+
+ *****NEXT CONTROL CARD ***** INT-POINTS
+
+      NPOVEG      30000
+
+
+ *****NEXT CONTROL CARD ***** SAM-OPT-NC
+
+      ISNC2  =        1
+      ISNC31 =        0      ISNC32 =        0
+      ISNC33 =        0      ISNC34 =        0
+      ISEL2  =        0
+      ISEL31 =        0      ISEL32 =        0
+      ISEL33 =        0
+
+
+ *****NEXT CONTROL CARD ***** SAM-OPT-CC
+
+      ISCC2  =        0      ISCC31 =        0
+      ISCC32 =        0      ISCC33 =        0
+
+
+ *****NEXT CONTROL CARD ***** NUCLEUS   
+
+      E PER NUCLEON=    2.750E+02
+      A-NUCLEUS=   1.
+      Z-NUCLEUS=   1.
+
+
+ *****NEXT CONTROL CARD ***** NUCL-MOD  
+
+      INUMOD=    0
+
+
+ *****NEXT CONTROL CARD ***** STRUCTFUNC
+
+      ILQMOD =       0
+      ILIB   =       2
+      ICODE  =   10150
+
+
+ *****NEXT CONTROL CARD ***** POLPDF    
+
+      IDPVR =         0
+
+
+ *****NEXT CONTROL CARD ***** LHAPATH   
+
+      LHAPATH=./PDFsets                                                                                                                                                                                                                               
+
+
+ *****NEXT CONTROL CARD ***** FLONG     
+
+      IFLOPT =    111   PARL11 =    0.0100   PARL19 =    0.0300
+
+
+ *****NEXT CONTROL CARD ***** ALFAS     
+
+      MST111 =      1
+      MST115 =      0
+      PAR111 =     0.2000
+      PAR112 =     0.2350
+
+
+ *****NEXT CONTROL CARD ***** NFLAVORS  
+
+      NPYMIN =      0
+      NPYMAX =      5
+
+
+ *****NEXT CONTROL CARD ***** IOUNITS   
+
+      ******* WARNING: CODEWORD IOUNITS IS DISABLED 
+
+
+ *****NEXT CONTROL CARD ***** RNDM-SEEDS
+
+      ISDINP =     -1
+      ISDOUT =     -1
+
+
+ *****NEXT CONTROL CARD ***** START     
+
+      NEVENT =       50000
+
+     ***** All output is redirected to file 
+           OUTFILENAM = outfiles/djangoh.NC.norad.18x275_Q2_1000_10000_out.dat
+     ***** from now on 
+ RANLUX LUXURY LEVEL SET BY RLUXGO : 4     P= 389
+ RANLUX INITIALIZED BY RLUXGO FROM SEEDS        2288           0           0
+1                                                                              
+ ******************************************************************************
+ ******************************************************************************
+ **                                                                          **
+ **                                                                          **
+ **              *......*                  Welcome to the Lund Monte Carlo!  **
+ **         *:::!!:::::::::::*                                               **
+ **      *::::::!!::::::::::::::*          PPP  Y   Y TTTTT H   H III   A    **
+ **    *::::::::!!::::::::::::::::*        P  P  Y Y    T   H   H  I   A A   **
+ **   *:::::::::!!:::::::::::::::::*       PPP    Y     T   HHHHH  I  AAAAA  **
+ **   *:::::::::!!:::::::::::::::::*       P      Y     T   H   H  I  A   A  **
+ **    *::::::::!!::::::::::::::::*!       P      Y     T   H   H III A   A  **
+ **      *::::::!!::::::::::::::* !!                                         **
+ **      !! *:::!!:::::::::::*    !!       This is PYTHIA version 6.424      **
+ **      !!     !* -><- *         !!       Last date of change: 21 Oct 2010  **
+ **      !!     !!                !!                                         **
+ **      !!     !!                !!       Now is  0 Jan 2000 at  0:00:00    **
+ **      !!                       !!                                         **
+ **      !!        lh             !!       Disclaimer: this program comes    **
+ **      !!                       !!       without any guarantees. Beware    **
+ **      !!                 hh    !!       of errors and use common sense    **
+ **      !!    ll                 !!       when interpreting results.        **
+ **      !!                       !!                                         **
+ **      !!                                Copyright T. Sjostrand (2010)     **
+ **                                                                          **
+ ** An archive of program versions and documentation is found on the web:    **
+ ** http://www.thep.lu.se/~torbjorn/Pythia.html                              **
+ **                                                                          **
+ ** When you cite this program, the official reference is to the 6.4 manual: **
+ ** T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026                 **
+ ** (LU TP 06-13, FERMILAB-PUB-06-052-CD-T) [hep-ph/0603175].                **
+ **                                                                          **
+ ** Also remember that the program, to a large extent, represents original   **
+ ** physics research. Other publications of special relevance to your        **
+ ** studies may therefore deserve separate mention.                          **
+ **                                                                          **
+ ** Main author: Torbjorn Sjostrand; Department of Theoretical Physics,      **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 48 16; e-mail: torbjorn@thep.lu.se              **
+ ** Author: Stephen Mrenna; Computing Division, GDS Group,                   **
+ **   Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA; **
+ **   phone: + 1 - 630 - 840 - 2556; e-mail: mrenna@fnal.gov                 **
+ ** Author: Peter Skands; CERN/PH-TH, CH-1211 Geneva, Switzerland            **
+ **   phone: + 41 - 22 - 767 24 47; e-mail: peter.skands@cern.ch             **
+ **                                                                          **
+ **                                                                          **
+ ******************************************************************************
+ ******************************************************************************
+1****************** PYINIT: initialization of PYTHIA routines *****************
+
+ ********************** PYINIT: initialization completed **********************
+1****************** PYINIT: initialization of PYTHIA routines *****************
+ ==== PYTHIA WILL USE LHAPDF ====
+ *************************************
+ *       LHAPDF Version 5.9.1        *
+ *   Configured for the following:   *
+ *             All PDFs              *
+ *         FULL MEMORY option        *
+ *    Maximum  3 concurrent set(s)   *
+ *************************************
+
+ >>>>>> PDF description: <<<<<<
+ CTEQ6.1                                                         
+ Reference:                                                      
+ J. Pumplin, D.R. Stump, J. Huston, H.L. Lai                     
+ W.K. Tung, S. Kuhlmann, J. Owens                                
+ hep-ph/0303013                                                  
+ This set has 41 member PDFs.                                    
+     mem=0 --> central value (cteq61m)                           
+     mem=1-40 --> 20 sets of +ve/-ve error values                
+ >>>>>>                   <<<<<<
+
+ ==============================================
+ PDFset name /cvmfs/sft.cern.ch/lcg/external/lhapdfsets/5.9.1/share/PDFsets/cteq61.LHgrid    
+ with         40 members
+ ====  initialized. ===========================
+ Strong coupling at Mz for PDF is:  0.11798
+
+ ********************** PYINIT: initialization completed **********************
+ **********************  Warning  ***********************
+ Minimum of hadronic final state mass (  3.0 GeV)
+ is less than 5 GeV. 
+ Phase space might be reduced and the total cross section
+ possibly be renormalized.
+ The correct value for the total cross section is stored in ---> PARL(24) <---
+ ********************************************************
+
+ Cross-section from HERACLES = 0.70159E-01 nb
+ Estimated relative error =     0.10E-03
+
+ Warning: x= 0.0518 or W/y=    0.9998 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0687 or W/y=    0.9999 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.1195 or W/y=    0.9998 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0519 or W/y=    0.9994 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0821 or W/y=    0.9992 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0776 or W/y=    0.9997 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.1546 or W/y=    0.9992 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0552 or W/y=    0.9991 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.1310 or W/y=    0.9998 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0989 or W/y=    0.9999 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed

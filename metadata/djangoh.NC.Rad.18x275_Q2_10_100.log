@@ -1,0 +1,620 @@
+*******************************************************************************
+
+                                   HERACLES 
+
+               Event generator for deep-inelastic e-P collisions 
+                        including radiative corrections  
+
+                           VERSION 4.6.21, 05.12.2022 
+
+
+
+                                H. Spiesberger 
+
+ ******************************************************************************
+
+
+
+
+ *****NEXT CONTROL CARD ***** OUTFILENAM
+
+      OUTFILENAM=outfiles/djangoh.NC.Rad.18x275_Q2_10_100                                        
+
+
+ *****NEXT CONTROL CARD ***** TITLE     
+
+
+      DJANGOH 4.6.21, LO at 18x275, Wmin=3.0                                          
+
+
+
+ *****NEXT CONTROL CARD ***** EL-BEAM   
+
+      EELE=   1.800E+01     POLARI=   0.000E+00     LLEPT= -1
+
+
+ *****NEXT CONTROL CARD ***** PR-BEAM   
+
+      EPRO=   2.750E+02     HPOLAR=   0.000E+00
+
+
+ *****NEXT CONTROL CARD ***** GSW-PARAM 
+
+      2 1 3 1 1 1 2 1 1 1 1
+
+
+ *****NEXT CONTROL CARD ***** KINEM-CUTS
+
+      ICUT, XMIN,        XMAX,        YMIN,        YMAX 
+      3     1.0000E-05   1.0000E+00   1.0000E-04   1.0000E+00
+            Q2MIN,       Q2MAX,       WMIN 
+            1.0000E+01   1.0000E+02   3.0000E+00
+
+
+ *****NEXT CONTROL CARD ***** EGAM-MIN  
+
+      EGMIN =       0.0000E+00
+
+
+ *****NEXT CONTROL CARD ***** INT-OPT-NC
+
+      INC2  =        1
+      INC31 =       18      INC32 =       18
+      INC33 =       18      INC34 =       18
+      IEL2  =        0
+      IEL31 =        0      IEL32 =        0
+      IEL33 =        0
+
+
+ *****NEXT CONTROL CARD ***** INT-OPT-CC
+
+      ICC2  =        0      ICC31 =        0
+      ICC32 =        0      ICC33 =        0
+
+
+ *****NEXT CONTROL CARD ***** INT-ONLY  
+
+      INTOPT       1
+
+
+ *****NEXT CONTROL CARD ***** INT-POINTS
+
+      NPOVEG      30000
+
+
+ *****NEXT CONTROL CARD ***** SAM-OPT-NC
+
+      ISNC2  =        1
+      ISNC31 =        1      ISNC32 =        1
+      ISNC33 =        1      ISNC34 =        1
+      ISEL2  =        0
+      ISEL31 =        0      ISEL32 =        0
+      ISEL33 =        0
+
+
+ *****NEXT CONTROL CARD ***** SAM-OPT-CC
+
+      ISCC2  =        0      ISCC31 =        0
+      ISCC32 =        0      ISCC33 =        0
+
+
+ *****NEXT CONTROL CARD ***** NUCLEUS   
+
+      E PER NUCLEON=    2.750E+02
+      A-NUCLEUS=   1.
+      Z-NUCLEUS=   1.
+
+
+ *****NEXT CONTROL CARD ***** NUCL-MOD  
+
+      INUMOD=    0
+
+
+ *****NEXT CONTROL CARD ***** STRUCTFUNC
+
+      ILQMOD =       0
+      ILIB   =       2
+      ICODE  =   10150
+
+
+ *****NEXT CONTROL CARD ***** POLPDF    
+
+      IDPVR =         0
+
+
+ *****NEXT CONTROL CARD ***** LHAPATH   
+
+      LHAPATH=./PDFsets                                                                                                                                                                                                                               
+
+
+ *****NEXT CONTROL CARD ***** FLONG     
+
+      IFLOPT =    111   PARL11 =    0.0100   PARL19 =    0.0300
+
+
+ *****NEXT CONTROL CARD ***** ALFAS     
+
+      MST111 =      1
+      MST115 =      0
+      PAR111 =     0.2000
+      PAR112 =     0.2350
+
+
+ *****NEXT CONTROL CARD ***** NFLAVORS  
+
+      NPYMIN =      0
+      NPYMAX =      5
+
+
+ *****NEXT CONTROL CARD ***** IOUNITS   
+
+      ******* WARNING: CODEWORD IOUNITS IS DISABLED 
+
+
+ *****NEXT CONTROL CARD ***** RNDM-SEEDS
+
+      ISDINP =     -1
+      ISDOUT =     -1
+
+
+ *****NEXT CONTROL CARD ***** START     
+
+      NEVENT =      500000
+
+     ***** All output is redirected to file 
+           OUTFILENAM = outfiles/djangoh.NC.Rad.18x275_Q2_10_100_out.dat
+     ***** from now on 
+ RANLUX LUXURY LEVEL SET BY RLUXGO : 4     P= 389
+ RANLUX INITIALIZED BY RLUXGO FROM SEEDS        2291           0           0
+1                                                                              
+ ******************************************************************************
+ ******************************************************************************
+ **                                                                          **
+ **                                                                          **
+ **              *......*                  Welcome to the Lund Monte Carlo!  **
+ **         *:::!!:::::::::::*                                               **
+ **      *::::::!!::::::::::::::*          PPP  Y   Y TTTTT H   H III   A    **
+ **    *::::::::!!::::::::::::::::*        P  P  Y Y    T   H   H  I   A A   **
+ **   *:::::::::!!:::::::::::::::::*       PPP    Y     T   HHHHH  I  AAAAA  **
+ **   *:::::::::!!:::::::::::::::::*       P      Y     T   H   H  I  A   A  **
+ **    *::::::::!!::::::::::::::::*!       P      Y     T   H   H III A   A  **
+ **      *::::::!!::::::::::::::* !!                                         **
+ **      !! *:::!!:::::::::::*    !!       This is PYTHIA version 6.424      **
+ **      !!     !* -><- *         !!       Last date of change: 21 Oct 2010  **
+ **      !!     !!                !!                                         **
+ **      !!     !!                !!       Now is  0 Jan 2000 at  0:00:00    **
+ **      !!                       !!                                         **
+ **      !!        lh             !!       Disclaimer: this program comes    **
+ **      !!                       !!       without any guarantees. Beware    **
+ **      !!                 hh    !!       of errors and use common sense    **
+ **      !!    ll                 !!       when interpreting results.        **
+ **      !!                       !!                                         **
+ **      !!                                Copyright T. Sjostrand (2010)     **
+ **                                                                          **
+ ** An archive of program versions and documentation is found on the web:    **
+ ** http://www.thep.lu.se/~torbjorn/Pythia.html                              **
+ **                                                                          **
+ ** When you cite this program, the official reference is to the 6.4 manual: **
+ ** T. Sjostrand, S. Mrenna and P. Skands, JHEP05 (2006) 026                 **
+ ** (LU TP 06-13, FERMILAB-PUB-06-052-CD-T) [hep-ph/0603175].                **
+ **                                                                          **
+ ** Also remember that the program, to a large extent, represents original   **
+ ** physics research. Other publications of special relevance to your        **
+ ** studies may therefore deserve separate mention.                          **
+ **                                                                          **
+ ** Main author: Torbjorn Sjostrand; Department of Theoretical Physics,      **
+ **   Lund University, Solvegatan 14A, S-223 62 Lund, Sweden;                **
+ **   phone: + 46 - 46 - 222 48 16; e-mail: torbjorn@thep.lu.se              **
+ ** Author: Stephen Mrenna; Computing Division, GDS Group,                   **
+ **   Fermi National Accelerator Laboratory, MS 234, Batavia, IL 60510, USA; **
+ **   phone: + 1 - 630 - 840 - 2556; e-mail: mrenna@fnal.gov                 **
+ ** Author: Peter Skands; CERN/PH-TH, CH-1211 Geneva, Switzerland            **
+ **   phone: + 41 - 22 - 767 24 47; e-mail: peter.skands@cern.ch             **
+ **                                                                          **
+ **                                                                          **
+ ******************************************************************************
+ ******************************************************************************
+1****************** PYINIT: initialization of PYTHIA routines *****************
+
+ ********************** PYINIT: initialization completed **********************
+1****************** PYINIT: initialization of PYTHIA routines *****************
+ ==== PYTHIA WILL USE LHAPDF ====
+ *************************************
+ *       LHAPDF Version 5.9.1        *
+ *   Configured for the following:   *
+ *             All PDFs              *
+ *         FULL MEMORY option        *
+ *    Maximum  3 concurrent set(s)   *
+ *************************************
+
+ >>>>>> PDF description: <<<<<<
+ CTEQ6.1                                                         
+ Reference:                                                      
+ J. Pumplin, D.R. Stump, J. Huston, H.L. Lai                     
+ W.K. Tung, S. Kuhlmann, J. Owens                                
+ hep-ph/0303013                                                  
+ This set has 41 member PDFs.                                    
+     mem=0 --> central value (cteq61m)                           
+     mem=1-40 --> 20 sets of +ve/-ve error values                
+ >>>>>>                   <<<<<<
+
+ ==============================================
+ PDFset name /cvmfs/sft.cern.ch/lcg/external/lhapdfsets/5.9.1/share/PDFsets/cteq61.LHgrid    
+ with         40 members
+ ====  initialized. ===========================
+ Strong coupling at Mz for PDF is:  0.11798
+
+ ********************** PYINIT: initialization completed **********************
+ INPUT PARAMETERS FOR VEGAS   NDIM=  5  NCALL=  23328.
+                              IT=    0  ITMX =   18
+                              ACC=  1.000D-05
+                              MDS=  1   ND=  50
+
+
+ INTEGRATION BY VEGAS
+ ITERATION NO  1.   INTEGRAL =  2.08572488D+01
+                    STD DEV  =  4.1500D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.08572488D+01
+                        STD DEV  =  4.1500D-01
+                        CHI**2 PER ITN   =  0.0000D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  2.   INTEGRAL =  2.10380307D+01
+                    STD DEV  =  1.5051D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.10173355D+01
+                        STD DEV  =  1.4102D-01
+                        CHI**2 PER ITN   =  1.6659D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  3.   INTEGRAL =  2.12269193D+01
+                    STD DEV  =  1.3197D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11304475D+01
+                        STD DEV  =  9.6104D-02
+                        CHI**2 PER ITN   =  6.7330D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  4.   INTEGRAL =  2.11999689D+01
+                    STD DEV  =  1.5468D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11500205D+01
+                        STD DEV  =  8.1614D-02
+                        CHI**2 PER ITN   =  4.9610D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  5.   INTEGRAL =  2.11805593D+01
+                    STD DEV  =  1.2423D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11592883D+01
+                        STD DEV  =  6.8177D-02
+                        CHI**2 PER ITN   =  3.8197D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  6.   INTEGRAL =  2.13330758D+01
+                    STD DEV  =  9.7293D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12173645D+01
+                        STD DEV  =  5.5734D-02
+                        CHI**2 PER ITN   =  7.3714D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  7.   INTEGRAL =  2.11709604D+01
+                    STD DEV  =  9.7996D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12059980D+01
+                        STD DEV  =  4.8439D-02
+                        CHI**2 PER ITN   =  6.4231D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  8.   INTEGRAL =  2.12873987D+01
+                    STD DEV  =  1.0613D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12201900D+01
+                        STD DEV  =  4.4052D-02
+                        CHI**2 PER ITN   =  6.1984D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  9.   INTEGRAL =  2.11697806D+01
+                    STD DEV  =  9.5183D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12112921D+01
+                        STD DEV  =  3.9977D-02
+                        CHI**2 PER ITN   =  5.7120D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 10.   INTEGRAL =  2.11676962D+01
+                    STD DEV  =  1.1447D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12065508D+01
+                        STD DEV  =  3.7741D-02
+                        CHI**2 PER ITN   =  5.2208D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 11.   INTEGRAL =  2.13809019D+01
+                    STD DEV  =  2.6071D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12102019D+01
+                        STD DEV  =  3.7379D-02
+                        CHI**2 PER ITN   =  5.1360D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 12.   INTEGRAL =  2.10385606D+01
+                    STD DEV  =  1.4930D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12002074D+01
+                        STD DEV  =  3.6254D-02
+                        CHI**2 PER ITN   =  5.7919D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 13.   INTEGRAL =  2.11631448D+01
+                    STD DEV  =  1.0800D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11964568D+01
+                        STD DEV  =  3.4370D-02
+                        CHI**2 PER ITN   =  5.3977D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 14.   INTEGRAL =  2.12277404D+01
+                    STD DEV  =  9.9477D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11998090D+01
+                        STD DEV  =  3.2482D-02
+                        CHI**2 PER ITN   =  5.0488D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 15.   INTEGRAL =  2.12783095D+01
+                    STD DEV  =  9.9009D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.12075047D+01
+                        STD DEV  =  3.0859D-02
+                        CHI**2 PER ITN   =  5.0938D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 16.   INTEGRAL =  2.11299390D+01
+                    STD DEV  =  9.3042D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11998516D+01
+                        STD DEV  =  2.9293D-02
+                        CHI**2 PER ITN   =  5.1714D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 17.   INTEGRAL =  2.11227877D+01
+                    STD DEV  =  9.4685D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11931523D+01
+                        STD DEV  =  2.7986D-02
+                        CHI**2 PER ITN   =  5.2258D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 18.   INTEGRAL =  2.09622977D+01
+                    STD DEV  =  9.5480D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  2.11752249D+01
+                        STD DEV  =  2.6863D-02
+                        CHI**2 PER ITN   =  8.0356D-01
+ INPUT PARAMETERS FOR VEGAS   NDIM=  5  NCALL=  23328.
+                              IT=    0  ITMX =   18
+                              ACC=  1.000D-05
+                              MDS=  1   ND=  50
+
+
+ INTEGRATION BY VEGAS
+ ITERATION NO  1.   INTEGRAL =  1.54651111D+01
+                    STD DEV  =  4.1541D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  1.54651111D+01
+                        STD DEV  =  4.1541D-01
+                        CHI**2 PER ITN   =  0.0000D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  2.   INTEGRAL =  1.50233324D+01
+                    STD DEV  =  1.8548D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  1.51003845D+01
+                        STD DEV  =  1.7103D-01
+                        CHI**2 PER ITN   =  9.6077D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO  3.   INTEGRAL =  1.47072364D+01
+                    STD DEV  =  9.0647D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47983966D+01
+                        STD DEV  =  8.1397D-02
+                        CHI**2 PER ITN   =  2.5693D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  4.   INTEGRAL =  1.48095130D+01
+                    STD DEV  =  9.1421D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.48032173D+01
+                        STD DEV  =  6.0994D-02
+                        CHI**2 PER ITN   =  1.7303D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  5.   INTEGRAL =  1.47739042D+01
+                    STD DEV  =  6.2591D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47891656D+01
+                        STD DEV  =  4.3876D-02
+                        CHI**2 PER ITN   =  1.3335D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  6.   INTEGRAL =  1.46873531D+01
+                    STD DEV  =  5.8707D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47535286D+01
+                        STD DEV  =  3.5268D-02
+                        CHI**2 PER ITN   =  1.4525D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  7.   INTEGRAL =  1.48565607D+01
+                    STD DEV  =  5.7268D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47817020D+01
+                        STD DEV  =  3.0045D-02
+                        CHI**2 PER ITN   =  1.6011D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  8.   INTEGRAL =  1.49251217D+01
+                    STD DEV  =  1.4298D-01
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47877826D+01
+                        STD DEV  =  2.9406D-02
+                        CHI**2 PER ITN   =  1.5099D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  9.   INTEGRAL =  1.47953696D+01
+                    STD DEV  =  9.8179D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47883986D+01
+                        STD DEV  =  2.8164D-02
+                        CHI**2 PER ITN   =  1.3240D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 10.   INTEGRAL =  1.48753775D+01
+                    STD DEV  =  6.6226D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.48016891D+01
+                        STD DEV  =  2.5919D-02
+                        CHI**2 PER ITN   =  1.3392D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 11.   INTEGRAL =  1.47659640D+01
+                    STD DEV  =  5.5545D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47953908D+01
+                        STD DEV  =  2.3505D-02
+                        CHI**2 PER ITN   =  1.2407D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 12.   INTEGRAL =  1.47756244D+01
+                    STD DEV  =  5.8460D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47926737D+01
+                        STD DEV  =  2.1817D-02
+                        CHI**2 PER ITN   =  1.1381D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 13.   INTEGRAL =  1.48233716D+01
+                    STD DEV  =  6.5207D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47957457D+01
+                        STD DEV  =  2.0692D-02
+                        CHI**2 PER ITN   =  1.0603D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 14.   INTEGRAL =  1.47639433D+01
+                    STD DEV  =  6.2017D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47926006D+01
+                        STD DEV  =  1.9632D-02
+                        CHI**2 PER ITN   =  9.9772D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 15.   INTEGRAL =  1.47726406D+01
+                    STD DEV  =  5.6399D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.47904665D+01
+                        STD DEV  =  1.8545D-02
+                        CHI**2 PER ITN   =  9.3510D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 16.   INTEGRAL =  1.49043513D+01
+                    STD DEV  =  5.8614D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.48008913D+01
+                        STD DEV  =  1.7680D-02
+                        CHI**2 PER ITN   =  1.1024D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 17.   INTEGRAL =  1.48191968D+01
+                    STD DEV  =  5.8372D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.48024220D+01
+                        STD DEV  =  1.6922D-02
+                        CHI**2 PER ITN   =  1.0395D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 18.   INTEGRAL =  1.48094292D+01
+                    STD DEV  =  5.5450D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.48030155D+01
+                        STD DEV  =  1.6186D-02
+                        CHI**2 PER ITN   =  9.7952D-01
+ INPUT PARAMETERS FOR VEGAS   NDIM=  5  NCALL=  23328.
+                              IT=    0  ITMX =   18
+                              ACC=  1.000D-05
+                              MDS=  1   ND=  50
+
+
+ INTEGRATION BY VEGAS
+ ITERATION NO  1.   INTEGRAL =  1.11435896D-01
+                    STD DEV  =  4.4072D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  1.11435896D-01
+                        STD DEV  =  4.4072D-02
+                        CHI**2 PER ITN   =  0.0000D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  2.   INTEGRAL =  3.82058799D-01
+                    STD DEV  =  5.4449D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  3.50956959D-01
+                        STD DEV  =  3.7730D-02
+                        CHI**2 PER ITN   =  5.2330D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  3.   INTEGRAL =  4.49630753D-01
+                    STD DEV  =  1.2243D-02
+ ACCUMULATED RESULTS.   INTEGRAL =  4.45722431D-01
+                        STD DEV  =  9.2505D-03
+                        CHI**2 PER ITN   =  3.8882D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  4.   INTEGRAL =  4.47423379D-01
+                    STD DEV  =  4.6001D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.47203498D-01
+                        STD DEV  =  3.5920D-03
+                        CHI**2 PER ITN   =  2.2307D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  5.   INTEGRAL =  4.40127714D-01
+                    STD DEV  =  3.1187D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.42625253D-01
+                        STD DEV  =  2.2141D-03
+                        CHI**2 PER ITN   =  2.1375D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  6.   INTEGRAL =  4.45363957D-01
+                    STD DEV  =  2.5666D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.43979511D-01
+                        STD DEV  =  1.6149D-03
+                        CHI**2 PER ITN   =  1.7686D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  7.   INTEGRAL =  4.48574522D-01
+                    STD DEV  =  8.1238D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44198622D-01
+                        STD DEV  =  1.6057D-03
+                        CHI**2 PER ITN   =  1.4816D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  8.   INTEGRAL =  4.50863336D-01
+                    STD DEV  =  5.5761D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44816867D-01
+                        STD DEV  =  1.5516D-03
+                        CHI**2 PER ITN   =  1.4559D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO  9.   INTEGRAL =  4.42824706D-01
+                    STD DEV  =  3.0532D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44358945D-01
+                        STD DEV  =  1.3733D-03
+                        CHI**2 PER ITN   =  1.2988D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 10.   INTEGRAL =  4.42148662D-01
+                    STD DEV  =  4.3070D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44130695D-01
+                        STD DEV  =  1.3091D-03
+                        CHI**2 PER ITN   =  1.1687D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 11.   INTEGRAL =  4.44994043D-01
+                    STD DEV  =  3.0683D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44278232D-01
+                        STD DEV  =  1.1991D-03
+                        CHI**2 PER ITN   =  1.0467D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 12.   INTEGRAL =  4.45354166D-01
+                    STD DEV  =  2.7164D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44471077D-01
+                        STD DEV  =  1.0918D-03
+                        CHI**2 PER ITN   =  9.5503D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 13.   INTEGRAL =  4.44284438D-01
+                    STD DEV  =  2.5657D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44439977D-01
+                        STD DEV  =  1.0007D-03
+                        CHI**2 PER ITN   =  8.6889D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 14.   INTEGRAL =  4.47187207D-01
+                    STD DEV  =  2.5498D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44841017D-01
+                        STD DEV  =  9.2840D-04
+                        CHI**2 PER ITN   =  8.7978D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 15.   INTEGRAL =  4.45283952D-01
+                    STD DEV  =  2.4473D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44901160D-01
+                        STD DEV  =  8.6570D-04
+                        CHI**2 PER ITN   =  8.1417D-01
+ INTEGRATION BY VEGAS
+ ITERATION NO 16.   INTEGRAL =  4.54819015D-01
+                    STD DEV  =  4.6686D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.45272753D-01
+                        STD DEV  =  8.5283D-04
+                        CHI**2 PER ITN   =  1.0788D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 17.   INTEGRAL =  4.39445708D-01
+                    STD DEV  =  2.9472D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.44802588D-01
+                        STD DEV  =  8.1886D-04
+                        CHI**2 PER ITN   =  1.2433D+00
+ INTEGRATION BY VEGAS
+ ITERATION NO 18.   INTEGRAL =  4.50513835D-01
+                    STD DEV  =  3.1566D-03
+ ACCUMULATED RESULTS.   INTEGRAL =  4.45195739D-01
+                        STD DEV  =  7.9233D-04
+                        CHI**2 PER ITN   =  1.3597D+00
+ **********************  Warning  ***********************
+ Minimum of hadronic final state mass (  3.0 GeV)
+ is less than 5 GeV. 
+ Phase space might be reduced and the total cross section
+ possibly be renormalized.
+ The correct value for the total cross section is stored in ---> PARL(24) <---
+ ********************************************************
+
+ Cross-section from HERACLES =  74.050     nb
+ Estimated relative error =     0.43E-03
+
+ Warning: x= 0.0006 or W/y=    0.9992 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0010 or W/y=    0.9991 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0010 or W/y=    0.9991 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0006 or W/y=    0.9992 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0021 or W/y=    0.9998 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0006 or W/y=    0.9992 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0010 or W/y=    0.9993 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0005 or W/y=    0.9998 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0006 or W/y=    0.9997 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
+ Warning: x= 0.0015 or W/y=    0.9993 outside QCD grid in event no.       0
+          weight on limit of grid used. Only first   10 warnings printed
